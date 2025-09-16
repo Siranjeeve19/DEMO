@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Carbon Registry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-seedling"></i>
+                <h1>Blue Carbon Registry</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#upload">Upload Data</a></li>
+                    <li><a href="#verification">Verification</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn btn-outline">Login</button>
+                <button class="btn btn-primary">Register</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h2>Transparent Blue Carbon Ecosystem Monitoring</h2>
+            <p>Track, verify, and tokenize coastal ecosystem restoration with our blockchain-based MRV system</p>
+            <button class="btn btn-primary">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard">
+        <div class="container">
+            <h2 class="section-title">Dashboard Overview</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-tree"></i>
+                    <h3>12,458</h3>
+                    <p>Mangroves Planted</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-co2"></i>
+                    <h3>2,845</h3>
+                    <p>Carbon Credits Generated</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>24</h3>
+                    <p>Active Projects</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3>18</h3>
+                    <p>Participating Organizations</p>
+                </div>
+            </div>
+            
+            <h2 class="section-title">Recent Projects</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://placeholder-image-service.onrender.com/image/400x300?prompt=Mangrove%20restoration%20project%20in%20Sundarbans%20with%20workers%20planting%20saplings&id=project1" alt="Mangrove restoration project in Sundarbans with workers planting saplings">
+                    </div>
+                    <div class="project-content">
+                        <h3>Sundarbans Restoration</h3>
+                        <p>Mangrove plantation initiative to protect against coastal erosion and sequester carbon.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> Started: Jan 2023</span>
+                            <span><i class="fas fa-co2"></i> 542 Credits</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://placeholder-image-service.onrender.com/image/400x300?prompt=Seagrass%20bed%20restoration%20in%20Gulf%20of%20Mannar%20with%20divers%20working&id=project2" alt="Seagrass bed restoration in Gulf of Mannar with divers working">
+                    </div>
+                    <div class="project-content">
+                        <h3>Gulf of Mannar Seagrass</h3>
+                        <p>Seagrass conservation project to enhance biodiversity and carbon sequestration.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> Started: Mar 2023</span>
+                            <span><i class="fas fa-co2"></i> 327 Credits</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://placeholder-image-service.onrender.com/image/400x300?prompt=Salt marsh restoration in Chilika Lake with measurement equipment&id=project3" alt="Salt marsh restoration in Chilika Lake with measurement equipment">
+                    </div>
+                    <div class="project-content">
+                        <h3>Chilika Salt Marsh</h3>
+                        <p>Salt marsh rehabilitation to improve carbon storage and provide wildlife habitat.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar"></i> Started: Jun 2023</span>
+                            <span><i class="fas fa-co2"></i> 218 Credits</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Upload Section -->
+    <section id="upload" class="data-upload">
+        <div class="container">
+            <h2 class="section-title">Upload Field Data</h2>
+            
+            <div class="upload-container">
+                <p>Upload your blue carbon project data for verification and tokenization. Supported data sources:</p>
+                
+                <div class="upload-options">
+                    <div class="upload-option" onclick="openModal('mobileModal')">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile App</h3>
+                        <p>Upload from field survey apps</p>
+                    </div>
+                    
+                    <div class="upload-option" onclick="openModal('droneModal')">
+                        <i class="fas fa-drone"></i>
+                        <h3>Drone Imagery</h3>
+                        <p>Aerial mapping and biomass data</p>
+                    </div>
+                    
+                    <div class="upload-option" onclick="openModal('satelliteModal')">
+                        <i class="fas fa-satellite"></i>
+                        <h3>Satellite Data</h3>
+                        <p>Remote sensing data integration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verification Process -->
+    <section id="verification" class="verification-process">
+        <div class="container">
+            <h2 class="section-title">Verification Process</h2>
+            
+            <div class="process-steps">
+                <div class="step completed">
+                    <div class="step-icon">
+                        <i class="fas fa-upload"></i>
+                    </div>
+                    <h3>Data Upload</h3>
+                    <p>Field data collection</p>
+                </div>
+                
+                <div class="step completed">
+                    <div class="step-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Validation</h3>
+                    <p>Automated checks</p>
+                </div>
+                
+                <div class="step active">
+                    <div class="step-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Verification</h3>
+                    <p>Expert review</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Tokenization</h3>
+                    <p>Credit issuance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Blue Carbon Registry</h3>
+                    <p>A transparent MRV system for coastal ecosystem restoration and carbon credit tokenization.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#dashboard">Dashboard</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#upload">Upload Data</a></li>
+                        <li><a href="#verification">Verification</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Access</a></li>
+                        <li><a href="#">Methodology</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="#">info@bluecarbonregistry.gov.in</a></li>
+                        <li><a href="#">+91 9876543210</a></li>
+                        <li><a href="#">National Centre for Coastal Research</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Blue Carbon Registry. Supported by MoES & NCCR.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="mobileModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Mobile Data Upload</h2>
+                <button class="close-modal" onclick="closeModal('mobileModal')">&times;</button>
+            </div>
+            <p>Upload data collected through mobile applications for field surveys.</p>
+            <div style="margin-top: 1.5rem;">
+                <input type="file" id="mobileFile" style="display: none;">
+                <button class="btn btn-primary" onclick="document.getElementById('mobileFile').click()">Select File</button>
+                <button class="btn btn-primary" style="margin-left: 10px;">Upload</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="droneModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Drone Imagery Upload</h2>
+                <button class="close-modal" onclick="closeModal('droneModal')">&times;</button>
+            </div>
+            <p>Upload aerial imagery and data collected through drone surveys.</p>
+            <div style="margin-top: 1.5rem;">
+                <input type="file" id="droneFile" style="display: none;">
+                <button class="btn btn-primary" onclick="document.getElementById('droneFile').click()">Select File</button>
+                <button class="btn btn-primary" style="margin-left: 10px;">Upload</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="satelliteModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Satellite Data Integration</h2>
+                <button class="close-modal" onclick="closeModal('satelliteModal')">&times;</button>
+            </div>
+            <p>Connect satellite data sources for automated monitoring.</p>
+            <div style="margin-top: 1.5rem;">
+                <button class="btn btn-primary">Connect to NASA API</button>
+                <button class="btn btn-primary" style="margin-left: 10px;">Connect to ISRO API</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scrpit.js"></script>
+</body>
+</html>
